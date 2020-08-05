@@ -1,0 +1,46 @@
+module TB_MEMORY;
+
+
+reg clk,wr_en, 
+reg [9:0] wr_addr, 
+reg [11:0] wr_data,
+
+reg [11:0] rd_adr,
+
+wire [11:0] data_out
+
+
+memory UUT(clk, wr_en, wr_addr, rd_adr, data_out);
+
+
+initial begin
+	rst = 1'b1;
+	#300
+	wr_en = 1'b1;	
+	addr_rd =  10'b00000_00000;
+	wr_data = 12'b1111_1111_1111;
+	#200
+	addr_rd =  10'b00000_00000;
+
+	//addr_rd =  10'b00001101;  //10'b00001101: begin mem = 12'b1010_1010_1010; end
+	wr_data = 12'b1111_1100_1111;
+
+#200
+	addr_rd =  10'b00000_01000;
+
+end
+
+always begin
+	if(rst == 1'b1) begin
+		clk = 1'b0;
+	#1;
+	end
+	else begin
+	#100;
+	clk = ~clk;
+	end
+end
+
+
+endmodule
+

@@ -1,0 +1,33 @@
+module TB_rgb2gray;
+
+`timescale 10ns/10ns
+
+
+
+reg clk;
+
+reg [11:0] rgb_in;
+wire [11:0] gray_out;
+
+
+rgbtogray UUT(clk, rgb_in, gray_out);
+
+
+
+initial begin
+
+
+
+
+end
+
+
+always @(posedge clk) begin
+
+#10
+clk = ~ clk;
+
+
+end
+
+endmodule

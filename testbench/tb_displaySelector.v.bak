@@ -1,0 +1,62 @@
+module TB_displaySelector(clk, rst, state,gen_addr,data_out, done, gen_en, wr_en, gray_out, red, blue, green, rVGA, bVGA, gVGA, wr_data)
+
+reg clk, rst;
+
+reg [5:0] state;
+reg [9:0] gen_addr;
+reg [11:0] data_out; //data stored in RAM
+reg gen_done, gen_en, wr_en;
+		//address gen and RAM write enable
+reg [3:0] gray_out, red, blue, green;
+wire [3:0] rVGA, gVGA, bVGA;
+wire [11:0] wr_data;
+parameter  RESET = 6'b000000;
+parameter RED  = 6'b000001;
+parameter BLUE  = 6'b000010;
+parameter GREEN  = 6'b001000;
+parameter GRAY = 6'b010000;
+
+reg [9:0] rom_addr;
+
+ROM toDisplay(rom_addr, red, green, blue, mem);
+memory u3(clk, wr_en, gen_addr, wr_data, rom_addr, data_out);
+addressGen u2(clk, rst, gen_en, gen_addr, gen_done);
+displaySelector UUT(clk, rst, current_state,gen_addr,data_out, gen_done, gen_en, wr_en, gray_out, red, blue, green, rVGA, bVGA, gVGA, wr_data);
+
+
+initial begin
+ 
+		for(rom_addr =  10'b00000_00000; rom_addr <= 10'b1111111111; rom_addr = rom_addr + 10'b00000_00001) 	begin			
+			#100
+
+		end
+		
+		#100			
+		
+end
+
+initial begin
+		for(rom_addr =  10'b00000_00000; rom_addr <= 10'b1111111111; rom_addr = rom_addr + 10'b00000_00001) 	begin			
+			#100
+
+
+		
+			current_state = RED;
+			done = 1'b0;
+			wr_en = 1'b0;
+			done = 1'b0;
+			gen_en = 1'b0;
+		end
+	
+end
+
+always begin
+	if(rst == 1'b1) begin
+		clk = 1'b0;
+	#1;
+	end
+	else begin
+	#100;
+	clk = ~clk;
+	end
+end

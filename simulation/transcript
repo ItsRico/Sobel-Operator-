@@ -1,0 +1,97 @@
+# Compile of addressGen.v was successful with warnings.
+# Compile of comb_ckt_generator.v was successful.
+# Compile of displaySelector.v was successful.
+# Compile of fsm.v was successful.
+# Compile of fsm2.v was successful.
+# Compile of mem.v was successful.
+# Compile of memory.v was successful.
+# Compile of pulse.v was successful.
+# Compile of rgbtogray.v was successful.
+# Compile of rom.v was successful.
+# Compile of sobel.v was successful.
+# Compile of top.v was successful.
+# Compile of vga_controller.v was successful.
+# Compile of tb_displaySelector.v was successful.
+# 14 compiles, 0 failed with no errors.
+vsim -gui work.tb_DISPS
+# vsim -gui work.tb_DISPS 
+# Start time: 11:12:19 on Aug 05,2020
+# Loading work.tb_DISPS
+# Loading work.FSM
+# Loading work.addressGen
+# Loading work.ROM
+# Loading work.displaySelector
+# Loading work.memOp
+# Loading work.grayScale
+# Loading work.memory
+add wave -position insertpoint sim:/tb_DISPS/Gx/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ricoc  Hostname: LAPTOP-NSLU7G4B  ProcessID: 17256
+#           Attempting to use alternate WLF file "./wlftbsv7xh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbsv7xh
+add wave -position insertpoint sim:/tb_DISPS/Gray/*
+add wave -position insertpoint sim:/tb_DISPS/ADDGEN/*
+add wave -position insertpoint sim:/tb_DISPS/fsm/*
+run
+run -all
+# ** Note: $stop    : C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v(132)
+#    Time: 411100 ps  Iteration: 0  Instance: /tb_DISPS
+# Break in Module tb_DISPS at C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v line 132
+# Compile of mem.v was successful.
+vsim -gui work.tb_DISPS
+# End time: 11:14:50 on Aug 05,2020, Elapsed time: 0:02:31
+# Errors: 0, Warnings: 9
+# vsim -gui work.tb_DISPS 
+# Start time: 11:14:50 on Aug 05,2020
+# Loading work.tb_DISPS
+# Loading work.FSM
+# Loading work.addressGen
+# Loading work.ROM
+# Loading work.displaySelector
+# Loading work.memOp
+# Loading work.grayScale
+# Loading work.memory
+add wave -position insertpoint sim:/tb_DISPS/fsm/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ricoc  Hostname: LAPTOP-NSLU7G4B  ProcessID: 17256
+#           Attempting to use alternate WLF file "./wlftbytx6x".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbytx6x
+add wave -position insertpoint sim:/tb_DISPS/Gray/*
+add wave -position insertpoint sim:/tb_DISPS/Gx/*
+add wave -position insertpoint sim:/tb_DISPS/ADDGEN/*
+run -all
+# ** Note: $stop    : C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v(132)
+#    Time: 411100 ps  Iteration: 0  Instance: /tb_DISPS
+# Break in Module tb_DISPS at C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v line 132
+# Compile of mem.v was successful.
+vsim -gui work.tb_DISPS
+# End time: 11:20:15 on Aug 05,2020, Elapsed time: 0:05:25
+# Errors: 0, Warnings: 4
+# vsim -gui work.tb_DISPS 
+# Start time: 11:20:15 on Aug 05,2020
+# Loading work.tb_DISPS
+# Loading work.FSM
+# Loading work.addressGen
+# Loading work.ROM
+# Loading work.displaySelector
+# Loading work.memOp
+# Loading work.grayScale
+# Loading work.memory
+add wave -position insertpoint sim:/tb_DISPS/Gray/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ricoc  Hostname: LAPTOP-NSLU7G4B  ProcessID: 17256
+#           Attempting to use alternate WLF file "./wlft7df8ct".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7df8ct
+add wave -position insertpoint sim:/tb_DISPS/Gx/*
+add wave -position insertpoint sim:/tb_DISPS/DS/*
+add wave -position insertpoint sim:/tb_DISPS/ADDGEN/*
+add wave -position insertpoint sim:/tb_DISPS/fsm/*
+run -all
+# ** Note: $stop    : C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v(132)
+#    Time: 411100 ps  Iteration: 0  Instance: /tb_DISPS
+# Break in Module tb_DISPS at C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v line 132
+# End time: 12:00:42 on Aug 05,2020, Elapsed time: 0:40:27
+# Errors: 0, Warnings: 3

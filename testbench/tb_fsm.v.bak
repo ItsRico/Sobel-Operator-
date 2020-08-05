@@ -1,0 +1,45 @@
+module TB_FSM;//(clk, addr_rd, red, green, blue, tb_data_out);\
+
+
+reg clk, rst;
+reg [4:0] SW;
+
+wire w_en1, w_en2, w_en3;
+wire [9:0] LEDR;
+
+
+//module FSM(clk, rst, SW, w_en1, w_en2, w_en3);
+
+FSM UUT( clk, rst,  w_en1, w_en2, w_en3);
+
+
+initial begin
+	rst = 1'b1;
+	#300
+	rst = 1'b0;
+	SW[0] = 1'b1;
+#200;
+	SW[1] = 1'b1;
+
+#200;
+	SW[2] = 1'b1;
+
+	
+	$stop;
+	
+
+end
+
+always begin
+	if(rst == 1'b1) begin
+		clk = 1'b0;
+	#1;
+	end
+	else begin
+	#100;
+	clk = ~clk;
+	end
+end
+
+
+endmodule

@@ -1,0 +1,45 @@
+module tb_rom(addr_rd, red, green, blue, tb_data_out);
+
+reg addr_rd;
+wire [11:0] tb_data_out;
+wire [3:0] red;
+wire [3:0] green;
+wire [3:0] blue;
+
+
+
+reg reset;
+
+
+ROM UUT(addr_rd, red, green, blue, tb_data_out);
+
+
+initial begin
+	reset = 1'b1;
+	#300
+	
+	addr_rd = 0;
+
+#200
+
+	addr_rd = 2;
+
+#200
+	addr_rd = 3;
+end
+
+always begin
+	if(rst == 1'b1) begin
+		clk = 1'b0;
+	#1;
+	end
+	else begin
+	#100;
+	clk = ~clk;
+	end
+end
+
+
+endmodule
+
+

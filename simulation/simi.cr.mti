@@ -1,0 +1,230 @@
+{C:/Users/ricoc/Desktop/VGA EX/hdl/rom.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/rom.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ROM
+
+Top level modules:
+	ROM
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/vga_controller.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/vga_controller.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module vga_controller
+
+Top level modules:
+	vga_controller
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/rgbtogray.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/rgbtogray.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module grayScale
+
+Top level modules:
+	grayScale
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/pulse.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/pulse.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pulsegen
+
+Top level modules:
+	pulsegen
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/memory.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_top.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_top.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/memory.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/rgbtogray.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/rgbtogray.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module grayScale
+
+Top level modules:
+	grayScale
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/vga_controller.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/vga_controller.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module vga_controller
+
+Top level modules:
+	vga_controller
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/testbench/tb_displaySelector.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_DISPS
+
+Top level modules:
+	tb_DISPS
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/top.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/top.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_fsm.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_fsm.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_FSM
+
+Top level modules:
+	TB_FSM
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/fsm.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/fsm.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_displaySelector.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_displaySelector.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_DISPS
+
+Top level modules:
+	tb_DISPS
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/fsm2.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/fsm2.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/comb_ckt_generator.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/comb_ckt_generator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comb_ckt_generator
+
+Top level modules:
+	comb_ckt_generator
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/addressGen.v} {2 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/addressGen.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module addressGen
+** Warning: C:/Users/ricoc/Desktop/Sobel Operator/hdl/addressGen.v(108): (vlog-2182) 'lock' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	addressGen
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/fsm.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/fsm.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/displaySelector.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/displaySelector.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module displaySelector
+
+Top level modules:
+	displaySelector
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_memoryInterface.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_memoryInterface.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_MEMINTERFACE
+
+Top level modules:
+	tb_MEMINTERFACE
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/addressGen.v} {2 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/addressGen.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module addressGen
+** Warning: C:/Users/ricoc/Desktop/VGA EX/hdl/addressGen.v(108): (vlog-2182) 'lock' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	addressGen
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/comb_ckt_generator.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/comb_ckt_generator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comb_ckt_generator
+
+Top level modules:
+	comb_ckt_generator
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_gray2mem.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_gray2mem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_GRAY2MEM
+
+Top level modules:
+	tb_GRAY2MEM
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_memAddress.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_memAddress.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_adresssing
+
+Top level modules:
+	tb_adresssing
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/sobel.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/sobel.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sobel
+
+Top level modules:
+	Sobel
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_rom.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_rom.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_ROM
+
+Top level modules:
+	TB_ROM
+
+} {} {}} {C:/Users/ricoc/Desktop/Sobel Operator/hdl/rom.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/Sobel Operator/hdl/rom.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ROM
+
+Top level modules:
+	ROM
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_S2B.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_S2B.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_SobeltoMem
+
+Top level modules:
+	tb_SobeltoMem
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_mem.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_mem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_MEMORY
+
+Top level modules:
+	TB_MEMORY
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_genDone.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_genDone.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_genDone
+
+Top level modules:
+	tb_genDone
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_addressgen.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_addressgen.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_addressGen
+
+Top level modules:
+	TB_addressGen
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_rgb2gray.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/testbench/tb_rgb2gray.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_rgb2gray
+
+Top level modules:
+	TB_rgb2gray
+
+} {} {}} {C:/Users/ricoc/Desktop/VGA EX/hdl/sobel.v} {1 {vlog -work work -stats=none {C:/Users/ricoc/Desktop/VGA EX/hdl/sobel.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sobel
+
+Top level modules:
+	Sobel
+
+} {} {}}
