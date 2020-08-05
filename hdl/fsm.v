@@ -11,11 +11,18 @@ parameter 	SOBEL 			 = 		6'b000100;
 parameter 	DONE 				 = 		6'b001000;
 output reg [5:0] state;
 reg [5:0]  state_c; //will let me select display
+
+
+
 always @(posedge clk) begin
 	state <= state_c;
 end
 initial state_c <= 6'b000000;
 initial state <= 6'b000000;
+
+
+// The FSM for this system is very simple, and linear. During the SETUP Phase, the grayscale is computed. Originally, it was fed the signal gen_done, but because of 
+//clock synchonization issues (add_gen clocked at 25 MHz and fsm at 50 Hz), I decided to manually change the state with the switch.
 always @(*) begin
 		if( rst == 1'b1) begin
 			state_c <= 6'b000000;
@@ -44,7 +51,7 @@ always @(*) begin
 			end
 		IDLE: 
 			begin
-					if(gen_done == 1'b0 & sobel_done == 1'b0) begin
+					if(gen_done == 1'b0 & sobel_done == 1'b0) begin // in this idle state, waits for any metastable conditions in the system to subside before proceeeding to SOBEL
 						state_c <=  SOBEL;
 						sobel_en = 1'b0;
 						gray_en = 1'b0;
@@ -57,7 +64,7 @@ always @(*) begin
 			end
 		SOBEL:
 			begin
-					//if(sobel_done == 1'b1 | gen_done == 1'b1) begin
+					//if(sobel_done == 1'b1 | gen_done == 1'b1) begin /// takes the output from mem.v where the algorithm is preformed
 					if(sobel_done == 1'b1) begin
 						state_c <= DONE;
 						sobel_en = 1'b1;
@@ -86,110 +93,7 @@ always @(*) begin
 	end
 end
 
-/*
-always @(*) begin
-		if( rst == 1'b1) begin
-			state_c <= 6'b000000;
-		end else begin
 
-
-	state <= #1 state_c;
-	sobel_en = 1'b0;
-	gray_en = 1'b0;
-	case(state)
-		RESET: begin
-						if (rst == 1'b1) begin
-							state_c <= RESET;
-						end
-						else begin
-							sobel_en = 1'b0;
-							gray_en = 1'b0;
-							state_c <= SETUP;
-						end
-		end
-		SETUP:
-			begin
-				if (rst == 1'b1) begin
-					state_c <= RESET;
-				end else begin
-					if(gen_done == 1'b1 & rst == 1'b0) begin
-						state_c <= #1 IDLE;
-						gray_en = 1'b1;
-						sobel_en = 1'b0;
-					end
-					else begin
-						state_c <= SETUP;
-						gray_en = 1'b1;
-						sobel_en = 1'b0 ;
-					end
-					
-				end
-			end
-		IDLE: 
-			begin
-				if( rst == 1'b1) begin
-						state_c <= #1 RESET;
-					end else begin
-					
-					if(gen_done == 1'b0 & sobel_done == 1'b0) begin
-						state_c <=  SOBEL;
-						sobel_en = 1'b0;
-						gray_en = 1'b0;
-					end
-					else begin
-						sobel_en = 1'b0;
-						gray_en = 1'b0;
-						state_c <= #1 IDLE;
-					end
-				end
-			end
-		SOBEL:
-			begin
-					if( rst == 1'b1) begin
-						state_c <= #1 RESET;
-					end else begin
-					if(sobel_done == 1'b1 & rst == 1'b0) begin
-						state_c <= DONE;
-						sobel_en = 1'b1;
-						gray_en = 1'b0;
-					end
-					else begin
-						sobel_en = 1'b1; //8/2 addition
-						gray_en = 1'b0;
-						state_c <= #1 SOBEL;
-						// waiting for sobel to finish
-					end
-				end
-			end
-		DONE:
-			begin 
-				if(rst == 1'b1) begin
-					state_c <= RESET;
-					sobel_en = 1'b0;
-					gray_en = 1'b0;
-					end
-				else begin
-					sobel_en = 1'b0;
-					gray_en = 1'b0;
-					state_c <= DONE;
-				end
-			end
-				
-		default:begin
-			if( rst == 1'b1) begin
-				state_c <= RESET;
-			end
-			else begin
-				state_c <= #1 6'b110110;
-				sobel_en = 1'b0;
-				gray_en = 1'b0;
-			end
-			
-		end
-		endcase
-	end
-end
-*/
 endmodule
 
 

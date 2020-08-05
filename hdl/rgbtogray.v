@@ -1,5 +1,5 @@
 module grayScale(clk, rgb_in, gray_out);
-
+	//computes the grayscale image
 input clk;
 
 input [11:0] rgb_in;
@@ -18,7 +18,7 @@ reg [3:0] blue, green, red;
 //.59G ~ G >> 1 (.5 G) + G >> 3 (.125) G 
 //.11B ~ B >> 3
 
-
+/// combinational logic that is fed input from the ROM and outputs to the RAM 
 always @(*) begin
 
 	red <= R >> 2;  //.25

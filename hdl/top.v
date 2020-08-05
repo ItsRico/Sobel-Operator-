@@ -39,7 +39,7 @@ module top (
 wire [31:0]    col, row;
 wire [3:0]     red, green, blue, r, g ,b, gray_out, wr_gx, wr_gy;
 
-// Timing signals - don't touch these.
+// Timing signals 
 wire           h_sync, v_sync;
 wire           disp_ena;
 wire           vga_clk;
@@ -76,11 +76,9 @@ assign  Gx_in = {wr_gx,wr_gx,wr_gx}; //
 memory Gx(vga_clk, 1'b1, sobel_en, gen_addr, Gx_in, vga_addr, Gx_out);
 memory Gy(vga_clk, 1'b1, sobel_en, gen_addr, Gy_in, vga_addr, Gy_out);//holds vertical operator resultant
 
-
 FSM fssm(clk, rst,SW[0], gen_done, sobel_done, gen_en, sobel_en, current_state);
 assign LEDR = current_state;
 
-//displaySelector DS(clk, SW, en_ram, en_sobel, addr, vga_addr, mem_out, Gxx, Gyy, state, red, green, blue, rVGA, bVGA, gVGA, Q_addr);
 
 displaySelector  disp(clk, SW[3:1], SW[9], SW[8], gen_addr, vga_addr, gray_mem,  Gx_out, Gy_out,current_state, red, green, blue, rVGA, bVGA, gVGA, Q_addr);
 

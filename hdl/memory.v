@@ -9,6 +9,7 @@ output reg [11:0] data_out;
 /* synthesis preserve */
 reg [11:0] mem [0:1023] ;
 
+//This is also synthesized as DUAL port RAM, stores both the horizontal and vertical components of the Sobel Operator
 
 always @(posedge clk) begin
 

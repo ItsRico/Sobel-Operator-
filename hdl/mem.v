@@ -10,6 +10,8 @@ output reg [11:0] data_out;
 output reg  [3:0] wr_gx;
 output reg [3:0] wr_gy;
 output reg  sobel_done;
+/// synthesis preserve signals to compiler to synthesis as dual port RAM
+/// also fixed an issue where the output of the grayscale operator would not be stored since it wasn't recognized as RAM.
 
 
 /* synthesis preserve */
@@ -33,9 +35,11 @@ localparam thirty1 = 10'b00000_11111;
 //reg signed x32 = 0;
 //reg signed x33 = -1;
  
-//
-//our vertical kernel
-//todo
+
+///I wanted to implement the algorithm from within the grayScale memory as a kind of external memory algorithm.
+//This consequently eliminated the need for a FIFO buffer or copious amounts of memory retrieval since the outputs could be 
+//combinationally computed from within this module.
+
 reg lock; 
  reg signed [5:0] x1, x2, x3,y1, y2, y3, temp,temp2;
  reg signed [5:0] a11, a12, a13, a21, a22, a23, a31, a32, a33;

@@ -2,9 +2,6 @@
 module displaySelector(clk, SW, en_ram, en_sobel, 
 gen_addr, vga_addr, data_out, Gx_out, Gy_out, cur_state, red, green, blue, rVGA, bVGA, gVGA, rd_addr);
 
-
-
-///this module multiplexes between the address necessary for preforming the sobel operator and reading from RAM/ROM to VGA
 input clk;
 
 input [2:0] SW;
@@ -23,8 +20,10 @@ input [3:0] red, blue, green;
 output reg [3:0] rVGA, bVGA, gVGA;
 output reg [9:0] rd_addr;
 
-
+//This module allows us to designate which output stream from the RAMs to feed to VGA display
 always @(*) begin
+	// I ended up not using this approach to multiplex between the address to read/write from and the addressess necessary to display to the screen
+	//since it caused issues with the ROM table being lost.
 	if(cur_state != 6'b001000 | cur_state != 6'b001001) begin //if we are not done, then rd_addr = gen_addr, always
 		rd_addr = gen_addr;
 	end

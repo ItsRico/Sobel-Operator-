@@ -4,6 +4,10 @@ module ROM( en, addr_rd, red, green, blue,mem);
 input en;
 input [9:0] addr_rd;
 /*synthesis preserve*/
+//emulating a ROM using a matlab script  https://www.ece.ucdavis.edu/~bbaas/180/tutorials/image.bitmaps/
+
+/// the output of the MIF script is: 12'bbbb_gggg_rrrr 
+
 output reg [11:0] mem  ;
 output reg [3:0] red;
 output reg [3:0] green;
